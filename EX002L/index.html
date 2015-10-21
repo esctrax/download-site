@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex,nofollow,noarchive" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<style>
+#content {
+  margin: 80px auto;
+  padding: 48px;
+  border: 1px solid #000;
+  width: 40%;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background: #ffffff;
+  background: -moz-linear-gradient(top,  #ffffff 0%, #e1e1e1 100%, #f6f6f6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e1e1e1), color-stop(100%,#f6f6f6));
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#e1e1e1 100%,#f6f6f6 100%); background: -o-linear-gradient(top,  #ffffff 0%,#e1e1e1 100%,#f6f6f6 100%);
+  background: -ms-linear-gradient(top,  #ffffff 0%,#e1e1e1 100%,#f6f6f6 100%);
+  background: linear-gradient(to bottom,  #ffffff 0%,#e1e1e1 100%,#f6f6f6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
+  -moz-border-radius: 10px;
+}
+@media screen and (max-width: 320px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  #content {
+    margin: 0 auto;
+    padding: 1%;
+    width: 97%;
+    height: 100%;
+  }
+}
+
+#loading {
+}
+
+#error {
+  color: #F00;
+  font-weight: bold;
+}
+</style>
+<script type="text/javascript">
+var Downloader = {};
+Downloader.config = {
+  endpoint: "https://lexdv5fu75.execute-api.us-east-1.amazonaws.com/prod",
+  key: "",
+  content: "EX002L",
+  paths: {
+      "フルセット": "DYSTOPIA-full-limited.zip",
+      "mp3のみ": "DYSTOPIA-mp3-limited.zip"
+      }
+};
+</script>
+<script src="js/main.js"></script>
+<title>DYSTOPIA</title>
+</head>
+<body>
+<div id="content">
+<img src="img/jacket.png" alt="jacket image" width=100% /><br />
+
+<p>Ca5/DYSTOPIA(LIMITED ver)</p>
+<p>
+DOWNLOAD CODEを入力し、<br />
+ボタンを押してください。
+</p>
+<p>
+<input id="key_input" type="text" name="k" size="18" value="" />
+<button id="download_button">次へ</button>
+</p>
+<div id="loading">
+    <img src="img/loading.gif" />
+</div>
+<div id="links"></div>
+<p id="error">
+</p>
+</div>
+</body>
+</html>
